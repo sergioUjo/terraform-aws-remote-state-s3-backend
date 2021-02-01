@@ -16,7 +16,6 @@ resource "aws_s3_bucket" "bucket" {
   depends_on = [
     aws_kms_key.encrypt_key]
   bucket = format("s3-%s", local.name_suffix)
-  region = data.aws_region._.name
   tags = var.tags
 
   versioning {
