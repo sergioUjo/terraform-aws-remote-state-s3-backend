@@ -1,4 +1,4 @@
-# remote-state-s3-backend
+# terraform-aws-remote-state-s3-backend
 
 ## What is Does:
 
@@ -20,7 +20,7 @@
 provider "aws" {}
 
 module "remote_state" {
-  source = "sergioUjo/remote-state-s3-backend"
+  source = "sergioUjo/terraform-aws-remote-state-s3-backend"
   tags = {
     cost_center = "myProject"
   }
