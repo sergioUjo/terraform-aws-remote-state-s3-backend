@@ -8,9 +8,9 @@
 
 ## Resource naming
 
-###Suffix: 
+### Suffix: 
     'terraform-remote-state-<region>-<accountid>'
-###Example
+### Example
     's3-terraform-remote-state-eu-west-1-123456789'
     'dynamo-terraform-remote-state-eu-west-1-123456789'
 
