@@ -3,3 +3,7 @@ variable "tags" {
   default = {}
   type = map(string)
 }
+variable "environment" {
+  type = string
+  default = ""
+}

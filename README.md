@@ -8,11 +8,18 @@
 
 ## Resource naming
 
-### Suffix: 
+### Suffix:
 
-    'terraform-remote-state-<region>-<accountid>'
-    
+    'terraform-remote-state-<region>-<accountid>-<?environment>'
+
 ### Example
+
+#### With Environment
+
+    's3-terraform-remote-state-eu-west-1-123456789-test'
+    'dynamodb-terraform-remote-state-eu-west-1-123456789-test'
+
+#### Without
 
     's3-terraform-remote-state-eu-west-1-123456789'
     'dynamodb-terraform-remote-state-eu-west-1-123456789'
@@ -23,7 +30,7 @@
 provider "aws" {}
 
 module "remote_state" {
-  source  = "sergioUjo/remote-state-s3-backend/aws"
+  source = "sergioUjo/remote-state-s3-backend/aws"
   tags = {
     cost_center = "myProject"
   }

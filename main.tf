@@ -6,6 +6,7 @@ data "aws_region" "_" {}
 
 locals {
   name_suffix = format("terraform-remote-state-%s-%s", data.aws_region._.name, data.aws_caller_identity._.id)
+  pos = var.environment == "" ? local.name_suffix : format("%s-%s",local.name_suffix,var.environment)
 }
 
 
